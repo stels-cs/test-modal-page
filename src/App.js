@@ -107,6 +107,11 @@ class App extends React.Component {
 						<SelectMimicry top="Страна" placeholder="Выбрать страну" onClick={() => this.setActiveModal(MODAL_PAGE_COUNTRIES)} />
 						<SelectMimicry top="Город" placeholder="Выбрать город" disabled />
 
+						<FormLayoutGroup top="Работа">
+							<Input placeholder="Место работы" />
+							<Input placeholder="Должность" />
+						</FormLayoutGroup>
+
 						<FormLayoutGroup top="Пол">
 							<Radio name="sex" value={0} defaultChecked>Любой</Radio>
 							<Radio name="sex" value={1}>Мужской</Radio>
@@ -147,6 +152,9 @@ class App extends React.Component {
 					onClose={this.modalBack}
 					settlingHeight={80}
 				>
+					<FormLayoutGroup top="Работа">
+						<Input placeholder="Место работы" />
+					</FormLayoutGroup>
 					<FormLayout>
 						<Button level="secondary" onClick={() => this.setActiveModal(MODAL_PAGE_USER_INFO)} size="xl">Информация о пользователе</Button>
 
@@ -157,6 +165,7 @@ class App extends React.Component {
 								);
 							})}
 						</FormLayoutGroup>
+
 					</FormLayout>
 				</ModalPage>
 
@@ -197,6 +206,11 @@ class App extends React.Component {
 					}
 					onClose={this.modalBack}
 				>
+					<FormLayout>
+					<FormLayoutGroup top="Работа">
+						<Input placeholder="Место работы" />
+					</FormLayoutGroup>
+					</FormLayout>
 					<List>
 						<Cell>
 							<InfoRow title="Дата рождения">
@@ -214,6 +228,11 @@ class App extends React.Component {
 							</InfoRow>
 						</Cell>
 					</List>
+					<FormLayout>
+						<FormLayoutGroup top="Работа">
+							<Input placeholder="Место работы" />
+						</FormLayoutGroup>
+					</FormLayout>
 				</ModalPage>
 
 				<ModalCard
